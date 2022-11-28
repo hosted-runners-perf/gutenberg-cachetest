@@ -1,15 +1,14 @@
 name: Unit Tests
 
 on:
-  workflow_dispatch:
-  schedule:
-    - cron: "*/30 * * * *"
+    workflow_dispatch:
+    schedule:
+        - cron: '*/30 * * * *'
 
 jobs:
     unit-js:
         name: JavaScript
         runs-on: ubuntu-latest
-        if: ${{ github.repository == 'WordPress/gutenberg' || github.event_name == 'pull_request' }}
 
         strategy:
             fail-fast: false
