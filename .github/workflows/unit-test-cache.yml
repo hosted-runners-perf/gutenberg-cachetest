@@ -8,6 +8,7 @@ on:
 jobs:
     unit-js:
         name: JavaScript
+        runs-on: ${{ matrix.os }}
         strategy:
             matrix:
                 os:
